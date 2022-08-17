@@ -1,29 +1,28 @@
 import React, { useState } from 'react'
-import { AppBar, Box, Button, Container, IconButton, Menu, MenuItem, Toolbar, Tooltip, Typography } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
+import {
+    AppBar,
+    Box,
+    Button,
+    Container,
+    IconButton,
+    Menu,
+    MenuItem,
+    Toolbar,
+    Tooltip,
+    Typography
+} from '@mui/material'
 
-const pages = ['Home', 'Sobre', 'Porftólio', 'Skills', 'Trabalhos'];
+const options = ['Home', 'Sobre', 'Porftólio', 'Skills', 'Trabalhos'];
 
 const Navbar = () => {
 
-    const [anchorElNav, setAnchorElNav] = useState(null);
-    const [anchorElUser, setAnchorElUser] = useState(null);
-
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-    };
-
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
-
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
+    const [openMenu, setOpenMenu] = useState(false);
+    const [anchorElUser, setAnchorElUser] = useState(false);
 
     return (
-        <AppBar position="static">
-            <Container maxWidth="xl">
+        <AppBar position="static" sx={{ bgcolor: '#161E35' }}>
+            <Container >
                 <Toolbar disableGutters
                     sx={{
                         display: 'flex',
@@ -32,25 +31,24 @@ const Navbar = () => {
                     }}>
                     <Typography
                         variant="h6"
-                        noWrap
                         sx={{
                             display: 'flex',
-                            fontFamily: 'monospace',
+                            fontFamily: 'Poppins, sans-serif',
                             fontWeight: 700,
-                            color: 'inherit',
-                            textDecoration: 'none',
                         }}
                     >
-                        Diego Fernandes
+                        Diego <span style={{ color: '#F8032D', paddingLeft: '0.3rem' }}> Fernandes</span>
                     </Typography>
-                    <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                        {pages.map((page) => (
+                    <Box
+                        sx={{ display: { xs: 'none', md: 'flex' } }}
+                    >
+                        {options.map((option) => (
                             <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
+                                key={option}
+                                onClick={() => setOpenMenu(false)}
                                 sx={{ ml: 2, color: 'white', display: 'block' }}
                             >
-                                {page}
+                                {option}
                             </Button>
                         ))}
                     </Box>
@@ -62,13 +60,13 @@ const Navbar = () => {
                                 edge="start"
                                 color="inherit"
                                 aria-label="open drawer"
-                                onClick={handleOpenUserMenu}
+                                onClick={() => setAnchorElUser(true)}
                             >
                                 <MenuIcon />
                             </IconButton>
                         </Tooltip>
                         <Menu
-                            sx={{ mt: '45px'}}
+                            sx={{ mt: '45px' }}
                             id="menu-appbar"
                             anchorEl={anchorElUser}
                             anchorOrigin={{
@@ -81,11 +79,11 @@ const Navbar = () => {
                                 horizontal: 'right',
                             }}
                             open={Boolean(anchorElUser)}
-                            onClose={handleCloseUserMenu}
+                            onClose={() => setAnchorElUser(false)}
                         >
-                            {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseUserMenu}>
-                                    <Typography sx={{ mx: '30px'}}>{page}</Typography>
+                            {options.map((option) => (
+                                <MenuItem key={option} onClick={() => setAnchorElUser(false)}>
+                                    <Typography sx={{ mx: '30px' }}>{option}</Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
