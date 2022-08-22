@@ -1,33 +1,43 @@
 import React from 'react'
-import { AppBar, Box, CardMedia, Container, Typography } from '@mui/material'
-import profileImg from '../../Images/profileII.png'
+import { AppBar, Box, CardMedia, Container } from '@mui/material'
 import { Description, SubTitle, Title } from '../../theme/styles'
+import profileImg from '../../Images/profileII.png'
 
 const About = () => {
     return (
-        <AppBar position="static" sx={{ bgcolor: '#161E35' }}>
+        <AppBar id='about' position="static" sx={{ bgcolor: '#161E35', boxShadow: 0 }}>
             <Container>
                 <Box
                     sx={{
-                        display: { xs: 'block', md: 'flex' },
+                        display: 'flex',
+                        flexDirection: { xs: 'column', md: 'row' },
                         justifyContent: 'center',
                         alignItems: 'center',
-                        paddingY: '3rem',
+                        paddingY: '3.5rem',
                     }}>
                     <Box
                         sx={{
+                            flex: 0.5,
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
+                            width: { xs: '250px', md: '380px' },
+                            height: { xs: '250px', md: '380px' },
+                            marginBottom: '1.5rem'
                         }}>
                         <CardMedia
                             component="img"
                             image={profileImg}
                             alt="Paella dish"
-                            sx={{ objectFit: 'cover', width: '320px' }}
+                            sx={{
+                                height: '100%',
+                                width: '100%',
+                                objectFit: 'contain'
+                            }}
                         />
                     </Box>
                     <Box sx={{
+                        flex: 1,
                         display: 'flex',
                         flexDirection: 'column',
                         gap: '0.8rem',
