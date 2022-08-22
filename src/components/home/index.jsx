@@ -5,14 +5,16 @@ import profileImg from '../../Images/profile.svg'
 
 const Home = () => {
     return (
-        <AppBar position='static' sx={{ bgcolor: '#161E35' }}>
+        <AppBar id='home' position='static' sx={{ bgcolor: '#161E35', boxShadow: 0 }}>
             <Container>
                 <Box
                     sx={{
-                        display: { xs: 'block', md: 'flex' },
+                        display: 'flex',
+                        flexDirection: { xs: 'column-reverse', md: 'row' },
                         justifyContent: 'center',
                         alignItems: 'center',
-                        paddingY: '3.5rem',
+                        paddingTop: '7rem',
+                        paddingBottom: '2rem'
                     }}>
                     <Box
                         sx={{
@@ -22,7 +24,13 @@ const Home = () => {
                             gap: '1rem',
                             paddingRight: { xs: 0, md: 5 },
                         }}>
-                        <Typography variant='h3' sx={{ fontWeight: 700, color: '#ACABBD' }}>
+                        <Typography
+                            sx={{
+                                fontSize: { xs: '2rem', sm: '2.4rem', md: '2.8rem' },
+                                fontWeight: 700,
+                                lineHeight: '3.2rem',
+                                color: '#ACABBD'
+                            }}>
                             Olá, Eu sou um<br />
                             <span style={{ color: '#FFF' }}>Desenvolvedor Front-End</span>
                         </Typography>
@@ -46,13 +54,19 @@ const Home = () => {
                             flex: 0.6,
                             display: 'flex',
                             justifyContent: 'center',
-                            alignItems: 'center'
+                            alignItems: 'center',
+                            width: { xs: '250px', md: '380px' },
+                            height: { xs: '250px', md: '380px' }
                         }}>
                         <CardMedia
                             component='img'
                             image={profileImg}
                             alt='Paella dish'
-                            sx={{ objectFit: 'cover', width: '320px' }}
+                            sx={{
+                                height: '100%',
+                                width: '100%',
+                                objectFit: 'contain'
+                            }}
                         />
                     </Box>
                 </Box>
