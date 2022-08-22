@@ -1,6 +1,6 @@
 import React from 'react'
 import { Technologies } from '../../data/technologies'
-import { Title } from '../../theme/styles'
+import { SubTitle, Title } from '../../theme/styles'
 import {
     AppBar,
     Box,
@@ -10,20 +10,20 @@ import {
 
 const Skills = () => {
     return (
-        <AppBar position="static" sx={{ bgcolor: '#161E35' }}>
+        <AppBar id='skills' position="static" sx={{ bgcolor: '#161E35', boxShadow: 0 }}>
             <Container
                 sx={{
+                    minHeight: '100vh',
                     height: 'auto',
                     paddingY: '3.5rem',
                     display: 'flex',
                     flexDirection: 'column',
-                    justifyContent: 'center',
                     alignItems: 'center'
                 }}>
                 <Title>Software Skills</Title>
                 <Box
                     sx={{
-                        width: '70%',
+                        width:  { xs: '80%', md: '58%' },
                         paddingY: '2.5rem',
                         display: 'flex',
                         flexWrap: 'wrap',
@@ -38,7 +38,8 @@ const Skills = () => {
                             sx={{
                                 display: 'flex',
                                 flexDirection: 'column',
-                                alignItems: 'center'
+                                alignItems: 'center',
+                                gap: '0.5rem'
                             }}
                         >
                             <img
@@ -48,7 +49,7 @@ const Skills = () => {
                                     height: '45px',
                                 }}
                             />
-                            <Typography variant='h6'>{index.name}</Typography>
+                            <SubTitle>{index.name}</SubTitle>
                         </Box>
                     ))}
                 </Box>
