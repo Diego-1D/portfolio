@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import MenuIcon from '@mui/icons-material/Menu';
 import {
     AppBar,
     Box,
@@ -12,7 +11,9 @@ import {
     Tooltip,
     Typography
 } from '@mui/material'
-import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link, animateScroll as scroll } from 'react-scroll'
+import { theme } from '../../theme/muiTheme';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const options = [
     {
@@ -28,20 +29,18 @@ const options = [
         name: 'Porftólio'
     },
     {
-        id: 'skills',
-        name: 'Skills'
-    },
-    {
         id: 'works',
         name: 'Trabalhos'
+    },
+    {
+        id: 'skills',
+        name: 'Skills'
     }
 ];
 
 const Navbar = () => {
 
     const [openMenu, setOpenMenu] = useState(false);
-    const [anchorElUser, setAnchorElUser] = useState(false);
-
     const [active, setActive] = useState("Home")
 
     const toggleHome = () => {
@@ -67,7 +66,7 @@ const Navbar = () => {
                                 cursor: 'pointer'
                             }}
                         >
-                            Diego <span style={{ color: '#F8032D', paddingLeft: '0.3rem' }}> Fernandes</span>
+                            Diego <span style={{ color: theme.palette.erro, paddingLeft: '0.3rem' }}> Fernandes</span>
                         </Typography>
                     </Link>
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}                    >
@@ -85,9 +84,9 @@ const Navbar = () => {
                                     onClick={() => setActive(option.name)}
                                     sx={{
                                         ml: 2,
-                                        color: `${active === option.name ? '#F8032D' : '#FFF'}`,
+                                        color: `${active === option.name ? theme.palette.erro : theme.palette.light}`,
                                         textDecoration: `${active === option.name ? 'underline' : 'none'}`,
-                                        textDecorationColor: `${active === option.name ? '#F8032D' : ''}`,
+                                        textDecorationColor: `${active === option.name ? theme.palette.erro : ''}`,
                                         display: 'block',
                                     }}
                                 >{option.name}
@@ -98,13 +97,13 @@ const Navbar = () => {
 
                     {/* Modo Responsivo */}
                     <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-                        <Tooltip title="Open settings">
+                        <Tooltip title="Open menu">
                             <IconButton
                                 size="large"
                                 edge="start"
                                 color="inherit"
-                                aria-label="open drawer"
-                                onClick={() => setAnchorElUser(true)}
+                                aria-label="open menu"
+                                onClick={() => setOpenMenu(true)}
                             >
                                 <MenuIcon />
                             </IconButton>
@@ -112,7 +111,7 @@ const Navbar = () => {
                         <Menu
                             sx={{ mt: '45px' }}
                             id="menu-appbar"
-                            anchorEl={anchorElUser}
+                            anchorEl={openMenu}
                             anchorOrigin={{
                                 vertical: 'top',
                                 horizontal: 'right',
@@ -122,8 +121,8 @@ const Navbar = () => {
                                 vertical: 'top',
                                 horizontal: 'right',
                             }}
-                            open={Boolean(anchorElUser)}
-                            onClose={() => setAnchorElUser(false)}
+                            open={Boolean(openMenu)}
+                            onClose={() => setOpenMenu(false)}
                         >
                             {options.map((option) => (
                                 <Link
@@ -136,7 +135,7 @@ const Navbar = () => {
                                 >
                                     <MenuItem
                                         key={option.id}
-                                        onClick={() => setAnchorElUser(false)}
+                                        onClick={() => setOpenMenu(false)}
                                     >
                                         <Typography sx={{ mx: '30px' }}>{option.name}</Typography>
                                     </MenuItem>
@@ -144,7 +143,6 @@ const Navbar = () => {
                             ))}
                         </Menu>
                     </Box>
-
                 </Toolbar>
             </Container>
         </AppBar>
