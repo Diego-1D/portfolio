@@ -1,37 +1,34 @@
 import React from 'react'
 import { AppBar, Box, Container, Link } from '@mui/material'
 import { Description } from '../../theme/styles'
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import EmailIcon from '@mui/icons-material/Email';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { LinkedIn, Email, GitHub, WhatsApp } from '@mui/icons-material';
+
+const container = {
+    display: 'flex',
+    flexDirection: 'column',
+    padding: '1.5rem',
+    justifyContent: 'center',
+    alignItems: 'center',
+}
 
 const Footer = () => {
     return (
-        <AppBar position="static" sx={{ bgcolor: '#161E35' }}>
-            <Container
-                sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    padding: '1.5rem',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                }}
-            >
+        <AppBar position="static" sx={{ bgcolor: '#161E35', boxShadow: 0 }}>
+            <Container sx={container}>
                 <Description>Santarém - Pará</Description>
                 <Description>2022</Description>
                 <Box sx={{ display: 'flex', gap: '1rem' }}>
                     <Link href="https://www.linkedin.com/in/diego-fernandes-dev" color="inherit">
-                        <LinkedInIcon fontSize='large' />
+                        <LinkedIn fontSize='medium' />
                     </Link>
                     <Link href="diegodfafernandes@gmail.com" color="inherit">
-                        <EmailIcon fontSize='large' />
+                        <Email fontSize='medium' />
                     </Link>
                     <Link href="https://github.com/Diego-1D" color="inherit">
-                        <GitHubIcon fontSize='large' />
+                        <GitHub fontSize='medium' />
                     </Link>
                     <Link href="https://www.linkedin.com/in/diego-fernandes-dev" color="inherit">
-                        <WhatsAppIcon fontSize='large' />
+                        <WhatsApp fontSize='medium' />
                     </Link>
                 </Box>
             </Container>
