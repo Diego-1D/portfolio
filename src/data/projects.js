@@ -1,84 +1,117 @@
-//IMAGES
-import LinkenInImage from '../Images/linkedIn.png';
-import AnimeImage from '../Images/anime.png';
-import TheCocktailImage from '../Images/theCocktail.png';
-import FinancesControlImage from '../Images/financesControl.png';
-import IceCreamImage from '../Images/iceCream.png';
-import FitSpaImage from '../Images/fitSpa.png';
-
-//ICONS
-import FirebaseIcon from '../Images/Icons/firebase.svg';
-import ReactIcon from '../Images/Icons/react.svg';
-import CssIcon from '../Images/Icons/css.svg';
-import AntDesignIcon from '../Images/Icons/antDesign.svg';
-import StyledComponentsIcon from '../Images/Icons/styledComponents.svg';
-import SassIcon from '../Images/Icons/sass.svg';
-import TypeScriptIcon from '../Images/Icons/typescript.svg';
-import BootStrapIcon from '../Images/Icons/bootstrap.png'
-
 export const Projects = [
     {
-        id: 1,
-        image: LinkenInImage,
+        key: 1,
+        image: 'https://raw.githubusercontent.com/Diego-1D/linkedIn-clone/main/src/images/Git_Img.png',
         name: 'Clone do LinkedIn',
         technoUsed: [
-            ReactIcon,
-            CssIcon,
-            FirebaseIcon,
+            'https://cdn.worldvectorlogo.com/logos/react-2.svg',
+            'https://cdn.worldvectorlogo.com/logos/css-3.svg',
+            'https://cdn.worldvectorlogo.com/logos/firebase-2.svg',
         ],
         url: 'https://diego-1d.github.io/linkedIn-clone/'
     },
     {
-        id: 2,
-        image: AnimeImage,
+        key: 2,
+        image: 'https://raw.githubusercontent.com/Diego-1D/anime/main/src/git/image.png',
         name: 'Anime',
         technoUsed: [
-            ReactIcon,
-            StyledComponentsIcon
+            'https://cdn.worldvectorlogo.com/logos/react-2.svg',
+            'https://cdn.worldvectorlogo.com/logos/styled-components-1.svg'
         ],
         url: 'https://diego-1d.github.io/anime/'
     },
     {
-        id: 3,
-        image: TheCocktailImage,
+        key: 3,
+        image: 'https://raw.githubusercontent.com/Diego-1D/the-cocktail/main/src/github/img.png',
         name: 'The Cocktail',
         technoUsed: [
-            ReactIcon,
-            AntDesignIcon,
+            'https://cdn.worldvectorlogo.com/logos/react-2.svg',
+            'https://seeklogo.com/images/A/ant-design-logo-EAB6B3D5D9-seeklogo.com.png',
         ],
         url: 'https://diego-1d.github.io/the-cocktail/'
     },
     {
-        id: 4,
-        image: FinancesControlImage,
+        key: 4,
+        image: 'https://raw.githubusercontent.com/Diego-1D/finances-control/main/src/git/img.png',
         name: 'Finances Control',
         technoUsed: [
-            ReactIcon,
-            TypeScriptIcon,
-            FirebaseIcon,
-            StyledComponentsIcon
+            'https://cdn.worldvectorlogo.com/logos/react-2.svg',
+            'https://cdn.worldvectorlogo.com/logos/typescript-2.svg',
+            'https://cdn.worldvectorlogo.com/logos/firebase-2.svg',
+            'https://cdn.worldvectorlogo.com/logos/styled-components-1.svg'
         ],
         url: 'https://diego-1d.github.io/finances-control/'
     },
     {
-        id: 5,
-        image: IceCreamImage,
+        key: 5,
+        image: 'https://github.com/Diego-1D/menu-icecream/raw/main/src/images/HeroImg.png?raw=true',
         name: 'Menu Ice Cream ',
         technoUsed: [
-            ReactIcon,
-            StyledComponentsIcon
+            'https://cdn.worldvectorlogo.com/logos/react-2.svg',
+            'https://cdn.worldvectorlogo.com/logos/styled-components-1.svg'
         ],
         url: 'https://diego-1d.github.io/menu-icecream/'
     },
     {
-        id: 6,
-        image: FitSpaImage,
+        key: 6,
+        image: 'https://raw.githubusercontent.com/Diego-1D/fit-spa/master/src/images/HeroImg.png',
         name: 'Fit Spa',
         technoUsed: [
-            ReactIcon,
-            StyledComponentsIcon
+            'https://cdn.worldvectorlogo.com/logos/react-2.svg',
+            'https://cdn.worldvectorlogo.com/logos/styled-components-1.svg'
         ],
         url: 'https://diego-1d.github.io/fit-spa/'
     },
-
+    {
+        key: 7,
+        image: "https://github.com/Diego-1D/crm-dashboard/blob/main/src/assets/images/hero-git.png?raw=true",
+        name: 'CRM Dashboard',
+        technoUsed: [
+            'https://cdn.worldvectorlogo.com/logos/react-2.svg',
+            'https://cdn.worldvectorlogo.com/logos/styled-components-1.svg'
+        ],
+        url: 'https://diego-1d.github.io/crm-dashboard/'
+    },
+    {
+        key: 8,
+        image: "https://raw.githubusercontent.com/Diego-1D/pomo-task/main/src/assets/hero.png",
+        name: 'Pomo Task',
+        technoUsed: [
+            'https://cdn.worldvectorlogo.com/logos/react-2.svg',
+            'https://cdn.worldvectorlogo.com/logos/typescript-2.svg',
+            'https://cdn.worldvectorlogo.com/logos/sass-1.svg'
+        ],
+        url: 'https://diego-1d.github.io/pomo-task/'
+    },
+    {
+        key: 9,
+        image: "https://github.com/Diego-1D/ecommerce-app/blob/main/src/assets/git_home.png?raw=true",
+        name: 'Shopping',
+        technoUsed: [
+            'https://cdn.worldvectorlogo.com/logos/react-2.svg',
+            'https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg'
+        ],
+        url: ''
+    },
+    {
+        key: 10,
+        image: "https://raw.githubusercontent.com/Diego-1D/bempaggo_form/main/src/assets/imgs/hero.png",
+        name: 'Formulário Bem Paggo',
+        technoUsed: [
+            'https://cdn.worldvectorlogo.com/logos/react-2.svg',
+            'https://cdn.worldvectorlogo.com/logos/styled-components-1.svg'
+        ],
+        url: 'https://diego-1d.github.io/bempaggo_form/'
+    },
+    {
+        key: 11,
+        image: "https://raw.githubusercontent.com/Diego-1D/food-delivery/38ddc59ff5bc8b047de73643820ce9ed7a946101/src/img/git_hero.png",
+        name: 'Food Delivery',
+        technoUsed: [
+            'https://cdn.worldvectorlogo.com/logos/react-2.svg',
+            'https://cdn.worldvectorlogo.com/logos/firebase-2.svg',
+            'https://cdn.worldvectorlogo.com/logos/tailwindcss.svg'
+        ],
+        url: 'https://github.com/Diego-1D/food-delivery/'
+    },
 ];
