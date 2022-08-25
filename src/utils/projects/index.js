@@ -1,6 +1,6 @@
 import { Projects } from "../../data/projects";
 
-const project ={
+const projectsList ={
     getData: ({from, to}) => {
         return new Promise ((resolve, reject) => {
 
@@ -14,4 +14,4 @@ const project ={
     }
 }
 
-export default project
+export default projectsList
