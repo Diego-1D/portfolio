@@ -7,6 +7,7 @@ import {
     Card,
     CardMedia,
     Container,
+    Link,
     Pagination,
     Stack,
 } from '@mui/material'
@@ -54,7 +55,6 @@ const Portfolio = () => {
 
 
     return (
-        <AppBar id='portfolio' position="static" sx={{ bgcolor: '#161E35', boxShadow: 0 }}>
             <Container sx={{
                 minHeight: 'auto',
                 paddingY: '1.5rem'
@@ -68,22 +68,26 @@ const Portfolio = () => {
                     {projects.map((index) => (
                         <Card
                             key={index.id}
-                            sx={cardImage}>
-                            <CardMedia
-                                component="img"
-                                height="180"
-                                image={index.image}
-                                alt={index.name}
-                            />
+                            sx={cardImage}
+                        >
+                            <Link href={index.url} target='_blank' rel='noreferrer'>
+                                <CardMedia
+                                    component="img"
+                                    height="100%"
+                                    image={index.image}
+                                    alt={index.name}
+                                    sx={{ objectFit: 'contain', marginBottom: '0.5rem' }}
+                                />
+                            </Link>
                             <Description>{index.name}</Description>
                             <Box>
                                 {index.technoUsed.map(techos => (
                                     <img
                                         src={techos}
                                         style={{
-                                            width: '20px',
-                                            height: '20px',
-                                            paddingRight: '0.7rem'
+                                            width: '30px',
+                                            paddingRight: '0.7rem',
+                                            margin: '0.2rem 0'
                                         }}
                                     />
                                 ))}
@@ -91,20 +95,23 @@ const Portfolio = () => {
                         </Card>
                     ))}
                 </Box>
-                <Stack spacing={2}
+                <Stack
+                    spacing={2}
                     sx={{
                         display: 'flex',
-                        alignItems: 'center',
+                        alignItems: 'center'
                     }}>
                     <Pagination
+                        sx={{ '.MuiButtonBase-root': { color: '#FFFFFF !important' } }}
+                        classes={{ color: '#FFFFFF !important' }}
                         count={Math.ceil(pagination.count / pageSize)}
                         onChange={handlePageChange}
                         shape="rounded"
                         color="error"
+
                     />
                 </Stack>
             </Container>
-        </AppBar>
     )
 }
 
