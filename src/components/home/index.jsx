@@ -14,7 +14,6 @@ const container = {
 
 const Home = () => {
     return (
-        <AppBar id='home' position='static' sx={{ bgcolor: '#161E35', boxShadow: 0 }}>
             <Container sx={container}>
                 <Box sx={{
                     flex: 0.8,
@@ -65,7 +64,6 @@ const Home = () => {
                     />
                 </Box>
             </Container>
-        </AppBar>
     )
 }
 
