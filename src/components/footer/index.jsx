@@ -13,26 +13,24 @@ const container = {
 
 const Footer = () => {
     return (
-        <AppBar position="static" sx={{ bgcolor: '#161E35', boxShadow: 0 }}>
             <Container sx={container}>
                 <Description>Santarém - Pará</Description>
                 <Description>2022</Description>
                 <Box sx={{ display: 'flex', gap: '1rem' }}>
-                    <Link href="https://www.linkedin.com/in/diego-fernandes-dev" color="inherit">
+                    <Link href="https://www.linkedin.com/in/diego-fernandes-dev" target='_blank' rel='noreferrer' color="inherit">
                         <LinkedIn fontSize='medium' />
                     </Link>
-                    <Link href="diegodfafernandes@gmail.com" color="inherit">
+                    <Link href='https://mail.google.com/mail/u/1/#inbox?compose=DmwnWrRqgkFNbRdpWfTFzmkFSKtfFxvhVcjrhCTRRBQxdXWKplsNbnXthtdqBRRtJdFklKVPFNCv' target='_blank' rel='noreferrer' color="inherit">
                         <Email fontSize='medium' />
                     </Link>
-                    <Link href="https://github.com/Diego-1D" color="inherit">
+                    <Link href="https://github.com/Diego-1D" target='_blank' rel='noreferrer' color="inherit">
                         <GitHub fontSize='medium' />
                     </Link>
-                    <Link href="https://www.linkedin.com/in/diego-fernandes-dev" color="inherit">
+                    <Link href="https://wa.me/5593992030706?text=Ol%C3%A1,%20Boa%20tarde" target='_blank' rel='noreferrer' color="inherit">
                         <WhatsApp fontSize='medium' />
                     </Link>
                 </Box>
             </Container>
-        </AppBar>
     )
 }
 
