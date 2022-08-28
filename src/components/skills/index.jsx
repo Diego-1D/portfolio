@@ -5,7 +5,7 @@ import { AppBar, Box, Container } from '@mui/material'
 
 const container = {
     minHeight: 'auto',
-    paddingY: '4rem',
+    paddingY: '3rem',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center'
@@ -23,33 +23,31 @@ const wrapper = {
 
 const Skills = () => {
     return (
-        <AppBar id='skills' position="static" sx={{ bgcolor: '#161E35', boxShadow: 0 }}>
-            <Container sx={container}>
-                <Title>Software Skills</Title>
-                <Box sx={wrapper}>
-                    {Technologies.map((index) => (
-                        <Box
-                            key={index.id}
-                            sx={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'center',
-                                gap: '0.5rem'
+        <Container sx={container}>
+            <Title>Software Skills</Title>
+            <Box sx={wrapper}>
+                {Technologies.map((index) => (
+                    <Box
+                        key={index.id}
+                        sx={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            gap: '0.5rem'
+                        }}
+                    >
+                        <img
+                            src={index.icon}
+                            style={{
+                                width: '45px',
+                                height: '45px',
                             }}
-                        >
-                            <img
-                                src={index.icon}
-                                style={{
-                                    width: '45px',
-                                    height: '45px',
-                                }}
-                            />
-                            <SubTitle>{index.name}</SubTitle>
-                        </Box>
-                    ))}
-                </Box>
-            </Container>
-        </AppBar>
+                        />
+                        <SubTitle>{index.name}</SubTitle>
+                    </Box>
+                ))}
+            </Box>
+        </Container>
     )
 }
 
