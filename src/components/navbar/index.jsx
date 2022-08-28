@@ -18,23 +18,28 @@ import MenuIcon from '@mui/icons-material/Menu';
 const options = [
     {
         id: 'home',
-        name: 'Home'
+        name: 'Home',
+        offset:-50
     },
     {
         id: 'about',
-        name: 'Sobre'
+        name: 'Sobre',
+        offset:-50
+    },
+    {
+        id: 'experiences',
+        name: 'Experiências',
+        offset:-50
     },
     {
         id: 'portfolio',
-        name: 'Porftólio'
-    },
-    {
-        id: 'works',
-        name: 'Trabalhos'
+        name: 'Portfólio',
+        offset:-50
     },
     {
         id: 'skills',
-        name: 'Skills'
+        name: 'Skills',
+        offset:-50
     }
 ];
 
@@ -48,8 +53,7 @@ const Navbar = () => {
     }
 
     return (
-        <AppBar sx={{ bgcolor: '#161E35', boxShadow: 0 }}>
-            <Container>
+            <Container position='static'>
                 <Toolbar disableGutters
                     sx={{
                         display: 'flex',
@@ -63,7 +67,8 @@ const Navbar = () => {
                                 display: 'flex',
                                 fontFamily: 'Poppins, sans-serif',
                                 fontWeight: 700,
-                                cursor: 'pointer'
+                                cursor: 'pointer',
+                                color: theme.palette.light
                             }}
                         >
                             Diego <span style={{ color: theme.palette.erro, paddingLeft: '0.3rem' }}> Fernandes</span>
@@ -77,7 +82,7 @@ const Navbar = () => {
                                 duration={500}
                                 spy={true}
                                 exact='true'
-                                offset={-50}
+                                offset={option.offset}
                             >
                                 <Button
                                     key={option.id}
@@ -145,7 +150,6 @@ const Navbar = () => {
                     </Box>
                 </Toolbar>
             </Container>
-        </AppBar>
     )
 }
 
