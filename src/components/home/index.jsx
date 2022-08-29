@@ -1,8 +1,8 @@
 import React from 'react'
+import {Box, Button, CardMedia, Container, Link, Typography } from '@mui/material'
 import { Description } from '../../theme/styles'
-import { AppBar, Box, Button, CardMedia, Container, Typography } from '@mui/material'
-import profileImg from '../../Images/profile.svg'
 import { theme } from '../../theme/muiTheme'
+import profileImg from '../../Images/profile.svg'
 
 const container = {
     display: 'flex',
@@ -14,56 +14,68 @@ const container = {
 
 const Home = () => {
     return (
-            <Container sx={container}>
-                <Box sx={{
-                    flex: 0.8,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '1rem',
-                    paddingRight: { xs: 0, md: 5 },
+        <Container id='home' sx={container}>
+            <Box sx={{
+                flex: 0.8,
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '1rem',
+                paddingRight: { xs: 0, md: 5 },
+            }}>
+                <Typography sx={{
+                    fontSize: { xs: '2rem', sm: '2.4rem', md: '2.8rem' },
+                    fontWeight: 700,
+                    lineHeight: '3.2rem',
+                    color: theme.palette.grey
                 }}>
-                    <Typography sx={{
-                        fontSize: { xs: '2rem', sm: '2.4rem', md: '2.8rem' },
-                        fontWeight: 700,
-                        lineHeight: '3.2rem',
-                        color: theme.palette.grey
-                    }}>
-                        Olá, Eu sou um<br />
-                        <span style={{ color: theme.palette.light }}>Desenvolvedor Front-End</span>
-                    </Typography>
-                    <Description>
-                        Profissional formado na área de Sistemas de Informação,
-                        com experiência na área de desenvolvimento de Front-End para aplicações Web.
-                    </Description>
-                    <Button sx={{
-                        width: '8rem',
-                        backgroundColor: theme.palette.erro,
-                        color: theme.palette.light,
-                        borderRadius: '18px'
-                    }}>
+                    Olá, Eu sou um<br />
+                    <span style={{ color: theme.palette.light }}>Desenvolvedor Front-End</span>
+                </Typography>
+                <Description>
+                    Profissional formado na área de Sistemas de Informação,
+                    com experiência na área de desenvolvimento de Front-End para aplicações Web.
+                </Description>
+                <Button sx={{
+                    width: '8rem',
+                    backgroundColor: theme.palette.erro,
+                    borderRadius: '18px',
+                    transition: '0.3s ease-in-out',
+
+                    ':hover': {
+                        backgroundColor: theme.palette.grey,
+                        transition: '0.3s ease-in-out',
+                    }
+                }}>
+                    <Link
+                        href='https://mail.google.com/mail/u/1/#inbox?compose=DmwnWrRqgkFNbRdpWfTFzmkFSKtfFxvhVcjrhCTRRBQxdXWKplsNbnXthtdqBRRtJdFklKVPFNCv'
+                        target='_blank'
+                        rel='noreferrer'
+                        sx={{ textDecorationLine: 'none',  color: theme.palette.light, }}
+                    >
                         Contate-me
-                    </Button>
-                </Box>
-                <Box sx={{
-                    flex: 0.6,
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    width: { xs: '250px', md: '380px' },
-                    height: { xs: '250px', md: '380px' }
-                }}>
-                    <CardMedia
-                        component='img'
-                        image={profileImg}
-                        alt='Paella dish'
-                        sx={{
-                            height: '100%',
-                            width: '100%',
-                            objectFit: 'contain'
-                        }}
-                    />
-                </Box>
-            </Container>
+                    </Link>
+                </Button>
+            </Box>
+            <Box sx={{
+                flex: 0.6,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: { xs: '230px', md: '360px' },
+                height: { xs: '230px', md: '360px' }
+            }}>
+                <CardMedia
+                    component='img'
+                    image={profileImg}
+                    alt='Paella dish'
+                    sx={{
+                        height: '100%',
+                        width: '100%',
+                        objectFit: 'contain'
+                    }}
+                />
+            </Box>
+        </Container>
     )
 }
 

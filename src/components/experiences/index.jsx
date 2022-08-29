@@ -11,7 +11,9 @@ const wrapper = {
 
 const Experiences = () => {
     return (
-        <Container sx={{
+        <Container 
+        id='experiences'
+        sx={{
             minHeight: 'auto',
             paddingTop: '1rem',
             paddingBottom: '2rem'
@@ -46,7 +48,7 @@ const Experiences = () => {
                     Profissional
                 </Typography>
                 <SubTitle>Empresa:
-                    <Description>Tracktus</Description>
+                    <Description> Tracktus</Description>
                 </SubTitle>
                 <SubTitle>Localidade:
                     <Description> Rio Grande do Sul, Brasil · Remoto</Description>

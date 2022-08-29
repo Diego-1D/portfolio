@@ -15,8 +15,8 @@ function App() {
       <Navbar />
       <Home />
       <About />
-      <Experiences />
       <Portfolio />
+      <Experiences />
       <Skills />
       <Footer />
     </ThemeProvider>

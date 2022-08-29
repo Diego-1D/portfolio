@@ -16,13 +16,13 @@ const cardImage = {
     flex: '1 1 300px',
     display: 'flex',
     flexDirection: 'column',
-    margin: '25px',
+    margin: '20px',
     border: '1px solid transparent',
     backgroundColor: 'transparent',
     transition: 'all 0.3s ease-in-out',
     cursor: 'pointer',
 
-    ":hover": {
+    ':hover': {
         border: '1px solid #F8032D',
         transition: 'all 0.3s ease-in-out',
     }
@@ -55,7 +55,9 @@ const Portfolio = () => {
 
 
     return (
-            <Container sx={{
+            <Container 
+            id='portfolio'
+            sx={{
                 minHeight: 'auto',
                 paddingY: '1.5rem'
             }}>
@@ -72,8 +74,8 @@ const Portfolio = () => {
                         >
                             <Link href={index.url} target='_blank' rel='noreferrer'>
                                 <CardMedia
-                                    component="img"
-                                    height="100%"
+                                    component='img'
+                                    height='100%'
                                     image={index.image}
                                     alt={index.name}
                                     sx={{ objectFit: 'contain', marginBottom: '0.5rem' }}
@@ -106,8 +108,8 @@ const Portfolio = () => {
                         classes={{ color: '#FFFFFF !important' }}
                         count={Math.ceil(pagination.count / pageSize)}
                         onChange={handlePageChange}
-                        shape="rounded"
-                        color="error"
+                        shape='rounded'
+                        color='error'
 
                     />
                 </Stack>

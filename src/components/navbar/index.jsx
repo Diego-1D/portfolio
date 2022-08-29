@@ -18,51 +18,47 @@ import MenuIcon from '@mui/icons-material/Menu';
 const options = [
     {
         id: 'home',
-        name: 'Home',
-        offset:-50
+        name: 'Home'
     },
     {
         id: 'about',
-        name: 'Sobre',
-        offset:-50
-    },
-    {
-        id: 'experiences',
-        name: 'Experiências',
-        offset:-50
+        name: 'Sobre'
     },
     {
         id: 'portfolio',
-        name: 'Portfólio',
-        offset:-50
+        name: 'Portfólio'
+    },
+    {
+        id: 'experiences',
+        name: 'Experiências'
     },
     {
         id: 'skills',
-        name: 'Skills',
-        offset:-50
+        name: 'Skills'
     }
 ];
 
 const Navbar = () => {
 
     const [openMenu, setOpenMenu] = useState(false);
-    const [active, setActive] = useState("Home")
+    const [active, setActive] = useState('Home')
 
     const toggleHome = () => {
         scroll.scrollToTop();
     }
 
     return (
-            <Container position='static'>
+        <AppBar sx={{backgroundColor:theme.palette.background.default}}>
+            <Container >
                 <Toolbar disableGutters
                     sx={{
                         display: 'flex',
                         justifyContent: 'space-between',
                         alignItems: 'center',
                     }}>
-                    <Link to="/" onClick={toggleHome}>
+                    <Link to='/' onClick={toggleHome}>
                         <Typography
-                            variant="h6"
+                            variant='h6'
                             sx={{
                                 display: 'flex',
                                 fontFamily: 'Poppins, sans-serif',
@@ -82,7 +78,7 @@ const Navbar = () => {
                                 duration={500}
                                 spy={true}
                                 exact='true'
-                                offset={option.offset}
+                                offset={-60}
                             >
                                 <Button
                                     key={option.id}
@@ -102,12 +98,12 @@ const Navbar = () => {
 
                     {/* Modo Responsivo */}
                     <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-                        <Tooltip title="Open menu">
+                        <Tooltip title='Open menu'>
                             <IconButton
-                                size="large"
-                                edge="start"
-                                color="inherit"
-                                aria-label="open menu"
+                                size='large'
+                                edge='start'
+                                color='inherit'
+                                aria-label='open menu'
                                 onClick={() => setOpenMenu(true)}
                             >
                                 <MenuIcon />
@@ -115,7 +111,7 @@ const Navbar = () => {
                         </Tooltip>
                         <Menu
                             sx={{ mt: '45px' }}
-                            id="menu-appbar"
+                            id='menu-appbar'
                             anchorEl={openMenu}
                             anchorOrigin={{
                                 vertical: 'top',
@@ -150,6 +146,7 @@ const Navbar = () => {
                     </Box>
                 </Toolbar>
             </Container>
+        </AppBar>
     )
 }
 

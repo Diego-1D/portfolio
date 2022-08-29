@@ -23,7 +23,7 @@ const wrapper = {
 
 const Skills = () => {
     return (
-        <Container sx={container}>
+        <Container id='skills' sx={container}>
             <Title>Software Skills</Title>
             <Box sx={wrapper}>
                 {Technologies.map((index) => (
