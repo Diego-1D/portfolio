@@ -26,14 +26,12 @@ const Footer = () => {
                 >
                     <LinkedIn fontSize='medium' />
                 </Link>
-                <Link
-                    href='https://mail.google.com/mail/u/1/#inbox?compose=DmwnWrRqgkFNbRdpWfTFzmkFSKtfFxvhVcjrhCTRRBQxdXWKplsNbnXthtdqBRRtJdFklKVPFNCv'
+                <a href='mailto:diegodfafernandes@gmail.com?subject=Assunto%20aqui'
                     target='_blank'
-                    rel='noreferrer'
-                    color={theme.palette.grey}
+                    style={{ color: theme.palette.grey, textDecorationLine: 'none' }}
                 >
                     <Email fontSize='medium' />
-                </Link>
+                </a>
                 <Link
                     href='https://github.com/Diego-1D'
                     target='_blank'

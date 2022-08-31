@@ -61,7 +61,7 @@ const Experiences = () => {
                 <SubTitle>Descrição:
                     <Description> Desenvolvimento de aplicações web utilizando o NextJS, React e Material UI.</Description>
                 </SubTitle>
-                <SubTitle>Competências: <Description> Next.js · React.js · JavaScript/TypeScript · Material-UI</Description>
+                <SubTitle>Competências: <Description> Next.js · React.js · Javascript/Typescript · Material-UI</Description>
                 </SubTitle>
             </Box>
         </Container>

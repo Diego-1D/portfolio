@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box, Button, CardMedia, Container, Link, Typography } from '@mui/material'
+import { Box, Button, CardMedia, Container, Link, Typography } from '@mui/material'
 import { Description } from '../../theme/styles'
 import { theme } from '../../theme/muiTheme'
 import profileImg from '../../Images/profile.svg'
@@ -46,14 +46,12 @@ const Home = () => {
                         transition: '0.3s ease-in-out',
                     }
                 }}>
-                    <Link
-                        href='https://mail.google.com/mail/u/1/#inbox?compose=DmwnWrRqgkFNbRdpWfTFzmkFSKtfFxvhVcjrhCTRRBQxdXWKplsNbnXthtdqBRRtJdFklKVPFNCv'
+                    <a href='mailto:diegodfafernandes@gmail.com?subject=Assunto%20aqui'
                         target='_blank'
-                        rel='noreferrer'
-                        sx={{ textDecorationLine: 'none',  color: theme.palette.light, }}
+                        style={{ color: theme.palette.light, textDecorationLine: 'none' }}
                     >
-                        Contate-me
-                    </Link>
+                        Contato
+                    </a>
                 </Button>
             </Box>
             <Box sx={{

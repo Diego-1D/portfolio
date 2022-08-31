@@ -1,7 +1,8 @@
 import React from 'react'
-import { AppBar, Box, CardMedia, Container, Link } from '@mui/material'
+import { Box, CardMedia, Container, Link } from '@mui/material'
 import { Description, SubTitle, Title } from '../../theme/styles'
 import profileImg from '../../Images/profileII.png'
+import { theme } from '../../theme/muiTheme'
 
 const container = {
     minHeight: 'auto',
@@ -49,7 +50,7 @@ const About = () => {
                 <Title>Sobre mim</Title>
                 <Description>
                     Sou um bacharel formado em Sistemas de Informação, atuando como desenvolvedor front-end,
-                    possuindo experiência em desenvolvimento web. Trabalhei como freelancer em uma empresa, nos quais
+                    possuo experiência em desenvolvimento web. Trabalhei como freelancer em uma empresa, na qual
                     atuei com NextJs, React, Javascript/Typescript e Material UI. <br />
                     Atualmente, possuo projetos pessoais desenvolvido principalmente em: React, Firebase, Frameworks
                     para CSS, como Styled Components, Sass, Material UI e Ant Design, além do próprio CSS. Como desenvolvedor,
@@ -73,14 +74,12 @@ const About = () => {
                         </Link>
                     </SubTitle>
                     <SubTitle>E-mail:
-                        <Link
-                            href='https://mail.google.com/mail/u/1/#inbox?compose=DmwnWrRqgkFNbRdpWfTFzmkFSKtfFxvhVcjrhCTRRBQxdXWKplsNbnXthtdqBRRtJdFklKVPFNCv'
+                        <a href='mailto:diegodfafernandes@gmail.com?subject=Assunto%20aqui'
                             target='_blank'
-                            rel='noreferrer'
-                            sx={{ textDecorationLine: 'none' }}
+                            style={{ color: theme.palette.light, textDecorationLine: 'none' }}
                         >
                             <Description> diegodfafernandes@gmail.com</Description>
-                        </Link>
+                        </a>
                     </SubTitle>
                     <SubTitle>LinkedIn:
                         <Link
