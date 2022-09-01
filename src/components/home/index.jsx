@@ -46,7 +46,7 @@ const Home = () => {
                         transition: '0.3s ease-in-out',
                     }
                 }}>
-                    <a href='mailto:diegodfafernandes@gmail.com?subject=Assunto%20aqui'
+                    <a href='mailto:diegodfafernandes@gmail.com?subject='
                         target='_blank'
                         style={{ color: theme.palette.light, textDecorationLine: 'none' }}
                     >

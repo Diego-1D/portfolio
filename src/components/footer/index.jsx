@@ -26,7 +26,7 @@ const Footer = () => {
                 >
                     <LinkedIn fontSize='medium' />
                 </Link>
-                <a href='mailto:diegodfafernandes@gmail.com?subject=Assunto%20aqui'
+                <a href='mailto:diegodfafernandes@gmail.com?subject='
                     target='_blank'
                     style={{ color: theme.palette.grey, textDecorationLine: 'none' }}
                 >

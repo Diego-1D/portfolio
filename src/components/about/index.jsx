@@ -74,7 +74,7 @@ const About = () => {
                         </Link>
                     </SubTitle>
                     <SubTitle>E-mail:
-                        <a href='mailto:diegodfafernandes@gmail.com?subject=Assunto%20aqui'
+                        <a href='mailto:diegodfafernandes@gmail.com?subject='
                             target='_blank'
                             style={{ color: theme.palette.light, textDecorationLine: 'none' }}
                         >
